@@ -19,7 +19,7 @@ and deicded to create this laucher and share it with everyone :)
 # To-do list
 + Open apps from task manager
 + Remove apps from task manager
-+ View app name in task manager
++ Show app name in task manager (in hebrew)
 + Option to customize the hotkeys/apps in the menu
 
 # Installations
