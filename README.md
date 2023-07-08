@@ -32,4 +32,15 @@ and deicded to create this laucher and share it with everyone :)
 
 # Installations
 
-Download latest app-release.apk and install it. 
+Download and install latest APK from the (releases page)[https://github.com/AshiVered/monolaunch/releases]. 
+
+
+# Support me
+I develop this project voluntarily, to benefit the community. But it's not an easy job with a lot of investment...
+If you want to support me, [buy me a coffee ☕](https://www.buymeacoffee.com/ashivered)
+
+
+
+I LOVE ISRAEL.
+Enjoy!
+
