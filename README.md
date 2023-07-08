@@ -16,6 +16,12 @@ and deicded to create this laucher and share it with everyone :)
 + D-pad left - Messages
 + D-pad down - Status bar
 + D-pad up - Task manager
+# To-do list
++ Open apps from task manager
++ Remove apps from task manager
++ View app name in task manager
++ Option to customize the hotkeys/apps in the menu
+
 # Installations
 
 Download latest app-release.apk and install it. 
