@@ -1,3 +1,11 @@
+# Screenshots
+Main screen
+![Main screen](/Screenshots/Screenshot_2023-07-09-01-15-38.png)
+App list
+![App list](/Screenshots/Screenshot_2023-07-09-01-15-52.png)
+Task manager
+![App list](/Screenshots/Screenshot_2023-07-09-01-16-00.png)
+
 # What is it?
 
 This is very light application launcher (or home screen) for Mocor-based cell phones. It seems like they are getting popular and you can buy it from TaoBao or AliExpress in 2019-2023 year.
