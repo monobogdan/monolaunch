@@ -76,36 +76,52 @@ public class Launcher extends Activity {
                 return true;
             }
 
-            if(keyCode >= 7 && keyCode <= 16)
+            if(keyCode == KeyEvent.KEYCODE_CALL)
             {
                 startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.android.dialer"));
 
                 return true;
             }
 
-            if(keyCode == KeyEvent.KEYCODE_BACK)
+///dial. copied from https://github.com/Barracuda72/minilaunch
+            if(keyCode >= KeyEvent.KEYCODE_0 && keyCode <= KeyEvent.KEYCODE_9)
             {
-                startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.android.mms"));
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+(keyCode-KeyEvent.KEYCODE_0)));
+                startActivity(intent);
                 return true;
             }
-
-            if(keyCode == KeyEvent.KEYCODE_MENU)
+            if(keyCode == KeyEvent.KEYCODE_POUND)
+            {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:#"));
+                startActivity(intent);
+                return true;
+            }
+            if(keyCode == KeyEvent.KEYCODE_STAR)
+            {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:*"));
+                startActivity(intent);
+                return true;
+            }
+            if(keyCode == KeyEvent.KEYCODE_BACK)
             {
                 startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.android.contacts"));
                 return true;
             }
 
-            if(keyCode == KeyEvent.KEYCODE_DPAD_LEFT)
+            if(keyCode == KeyEvent.KEYCODE_MENU)
             {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://google.com"));
-
-                startActivity(intent);
+                startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.sprd.fileexplorer"));
                 return true;
             }
 
-            if(keyCode == KeyEvent.KEYCODE_DPAD_UP)
+            if(keyCode == KeyEvent.KEYCODE_DPAD_LEFT)
+                startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.android.mms"));
+
+
+            if(keyCode == KeyEvent.KEYCODE_DPAD_DOWN)
             {
                 try {
                     StatusBarManager barMan = (StatusBarManager) getContext().getSystemService("statusbar");
@@ -115,22 +131,14 @@ public class Launcher extends Activity {
                     Log.i(TAG, "onKeyUp: Failed to bring status");
                 }
 
-                //startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.android.alarmclock"));
                 return true;
             }
 
             if(keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)
-            {
-                try {
-                    startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.whatsapp"));
-                } catch(Exception e)
-                {
+                startActivity(getContext().getPackageManager().getLaunchIntentForPackage("com.android.calendar"));
 
-                }
-                return true;
-            }
 
-            if(keyCode == KeyEvent.KEYCODE_DPAD_DOWN)
+            if(keyCode == KeyEvent.KEYCODE_DPAD_UP)
             {
                 switchToTasks();
 
@@ -147,10 +155,10 @@ public class Launcher extends Activity {
         {
             float metrics = fontPaint.getFontMetrics().bottom;
             float bottomLine = getHeight() - metrics - 3;
-            float rightLine = getWidth() - fontPaint.measureText("Сообщения") - 5.0f;
+            float rightLine = getWidth() - fontPaint.measureText((getApplicationContext().getResources().getString(R.string.contacts))) - 5.0f;
 
-            canvas.drawText("Контакты", 5.0f, bottomLine, fontPaint);
-            canvas.drawText("Сообщения", rightLine, bottomLine, fontPaint);
+            canvas.drawText(getApplicationContext().getResources().getString(R.string.files), 5.0f, bottomLine, fontPaint);
+            canvas.drawText(getApplicationContext().getResources().getString(R.string.contacts), rightLine, bottomLine, fontPaint);
 
             float centerLine = getWidth() / 2 - (iconMenu.getMinimumWidth() / 2);
 
