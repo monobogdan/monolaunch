@@ -10,12 +10,12 @@ and deicded to create this laucher and share it with everyone :)
 + Fully smooth animated
 + Task manager
 # Hotkeys
-Left (menu key) - Files
-Right (back key) - contacts
-D-pad right - Calendar
-D-pad left - Messages
-D-pad down - Status bar
-D-pad up - Task manager
++ Left (menu key) - Files
++ Right (back key) - contacts
++ D-pad right - Calendar
++ D-pad left - Messages
++ D-pad down - Status bar
++ D-pad up - Task manager
 # Installations
 
 Download latest app-release.apk and install it. 
