@@ -10,9 +10,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="contacts">Contacts</string>
-    <string name="files">Files</string>
-    <string name="unread">Unread SMS</string>
-    <string name="missed">Missed calls</string>
-    <string name="ram">MB available</string>
+    <string name="contacts">Контакты</string>
+    <string name="files">Файлы</string>
+    <string name="unread">не прочтено</string>
+    <string name="missed">пропущено</string>
+    <string name="ram">мб доступно</string>
 </resources>

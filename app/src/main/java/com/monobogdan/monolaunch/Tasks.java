@@ -1,6 +1,7 @@
 package com.monobogdan.monolaunch;
 
 import android.app.ActivityManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -23,9 +24,12 @@ import java.util.List;
 
 public class Tasks extends ListView {
 
+    public String PACKAGE_NAME;
+
     class AppTask
     {
         public String name;
+
         public Bitmap icon;
         public int id;
         public int memUsage;
@@ -115,12 +119,12 @@ public class Tasks extends ListView {
             launcher.switchToHome();
             return true;
         }
-
         if(keyCode == KeyEvent.KEYCODE_DPAD_CENTER)
         {
-            launcher.switchToHome();
-            activityManager.moveTaskToFront(tasks.get(getSelectedItemPosition()).id, 0);
-            return true;
+            PACKAGE_NAME = getContext().getPackageName();
+  /*          Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.setComponent(new ComponentName = PACKAGE_NAME);
+            launcher.startActivity(intent); */
         }
 
         return super.onKeyUp(keyCode, event);

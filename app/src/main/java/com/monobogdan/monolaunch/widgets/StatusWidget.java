@@ -148,9 +148,9 @@ public class StatusWidget extends BroadcastReceiver {
         float animFactor = (float)Math.abs (Math.sin((new Date().getTime() - view.getTimeSinceStart()) * 0.005f));
         String senderStr = smsSender.length() > 0 ? "(" + smsSender + ")" : "";
 
-        y += drawStatusIcon(iconSMS.getBitmap(), 5.0f, y, 1.0f, String.valueOf(smsCount) + " не прочтено " + senderStr, cnvs);
-        y += drawStatusIcon(iconDial.getBitmap(), 5.0f, y, 1.0f, String.valueOf(dialCount) + " пропущено", cnvs);
-        y += drawStatusIcon(iconRAM.getBitmap(), 5.0f, y, 1.0f, memInfo.availMem / 1024 / 1024 + "мб доступно", cnvs);
+        y += drawStatusIcon(iconSMS.getBitmap(), 5.0f, y, 1.0f, String.valueOf(smsCount) + " " + context.getString(R.string.unread) + senderStr, cnvs);
+        y += drawStatusIcon(iconDial.getBitmap(), 5.0f, y, 1.0f, String.valueOf(dialCount) + " " +  context.getString(R.string.missed), cnvs);
+        y += drawStatusIcon(iconRAM.getBitmap(), 5.0f, y, 1.0f, memInfo.availMem / 1024 / 1024 + " " +  context.getString(R.string.ram), cnvs);
 
         return y;
     }
