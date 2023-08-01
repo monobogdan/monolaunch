@@ -30,17 +30,13 @@ and deicded to create this laucher and share it with everyone :)
 + Show app name in task manager (in hebrew)
 + Option to customize the hotkeys/apps in the menu
 
++ # Current maintainer
+
+  There is new maintainer of this project - see his fork here:
+  https://github.com/AshiVered/monolaunch/releases
+
 # Installations
 
-Download and install latest APK from the (releases page)[https://github.com/AshiVered/monolaunch/releases]. 
+Download and install latest APK from the (releases page).
 
-
-# Support me
-I develop this project voluntarily, to benefit the community. But it's not an easy job with a lot of investment...
-If you want to support me, [buy me a coffee ☕](https://www.buymeacoffee.com/ashivered)
-
-
-
-I LOVE ISRAEL.
-Enjoy!
 
